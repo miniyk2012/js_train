@@ -28,20 +28,36 @@ body {
   <body>
     <h1>What to buy</h1>
     <p title="a gentle reminder">Don't forget to buy this stuff.</p>
-	<p>This is just a test</p>
+	<p class="test">This is just a test</p>
     <ul id="purchases">
       <li>A tin of beans</li>
       <li>Cheese</li>
       <li>Milk</li>
     </ul>
 	<script type="text/JavaScript">
-	var paras = document.getElementsByTagName("p");
-	for (var i=0; i< paras.length; i++) {
-	  var title_text = paras[i].getAttribute("title");
-	  if (title_text != null) {
-		alert(title_text);
-	  }
-	}
+  // var paras = document.getElementsByTagName("p");
+  // alert(paras);
+  // alert(document.getElementById("purchases"));
+	// for (var i=0; i< paras.length; i++) {
+	//   var title_text = paras[i].getAttribute("title");
+	//   if (title_text != null) {
+	// 	alert(title_text)
+	//   }
+  // }
+//  console.log(document.getElementsByTagName("head"));
+// var shopping = document.getElementById("purchases");
+// var items = shopping.getElementsByTagName("*");
+// for (var i=0; i < items.length; i++) {
+//   console.log(items[i]);
+// }
+var paras = document.getElementsByTagName("p");
+for (var i=0; i < paras.length; i++) {
+  var title_text = paras[i].getAttribute("title");
+  if (title_text) {
+    paras[i].setAttribute("title", "new title");
+    alert(paras[i].getAttribute("title"));
+  }
+}
 	</script>
   </body>
 </html>

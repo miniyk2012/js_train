@@ -4,5 +4,6 @@ function showPic(whichpic) {
   placeholder.setAttribute("src",source);
   var text = whichpic.getAttribute("title");
   var description = document.getElementById("description");
+  // alert(description.firstChild.nodeValue);
   description.firstChild.nodeValue = text;
 }
