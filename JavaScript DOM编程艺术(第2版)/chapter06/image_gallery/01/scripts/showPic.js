@@ -24,9 +24,9 @@ function prepareGallery() {
   var links = gallery.getElementsByTagName("a");
   for (var i = 0; i < links.length; i++) {
     links[i].onclick = function () {
-      return showPic(this);
+      return showPic(this);  // 不仅支持鼠标，也支持键盘
     }
-    links[i].onkeypress = links[i].onclick;
+    // links[i].onkeypress = links[i].onclick; // 键盘访问
   }
 }
 
